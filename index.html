@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Documentation - FreeCodeCamp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <div class="container">
+        <nav id="navbar">
+            <header>CSS Guide</header>
+            <a href="#What_is_CSS" class="nav-link">What is CSS</a>
+            <a href="#Who_Creates_and_Maintains_CSS" class="nav-link">Who Creates and Maintains CSS</a>
+            <a href="#CSS_Versions" class="nav-link">CSS Versions</a>
+            <a href="#The_Type_Selectors" class="nav-link">The Type Selectors</a>
+            <a href="#The_Universal_Selectors" class="nav-link">The Universal Selectors</a>
+            <a href="#The_Descendant_Selectors" class="nav-link">The Descendant Selectors</a>
+            <a href="#The_Class_Selectors" class="nav-link">The Class Selectors</a>
+            <a href="#The_ID_Selectors" class="nav-link">The ID Selectors</a>
+            <a href="#The_border_style_Property" class="nav-link">The border style Property</a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="What_is_CSS">
+                <header>What is CSS</header>
+                <p>CSS has a much wider array of attributes than HTML, so you can give a far better look to your HTML page in comparison to HTML attributes</p>
+                <p>Style sheets allow content to be optimized for more than one type of device. By using the same HTML document, different versions of a website can be presented for handheld devices such as PDAs and cell phones or for printing.</p>
+                <p>Now HTML attributes are being deprecated and it is being recommended to use CSS. So its a good idea to start using CSS in all the HTML pages to make them compatible to future browsers.</p>
+            </section>
+            <section class="main-section" id="Who_Creates_and_Maintains_CSS">
+                <header>Who Creates and Maintains CSS</header>
+                <p>CSS is created and maintained through a group of people within the W3C called the CSS Working Group. The CSS Working Group creates documents called specifications. When a specification has been discussed and officially ratified by the W3C members, it becomes a recommendation.</p>
+                <p>These ratified specifications are called recommendations because the W3C has no control over the actual implementation of the language. Independent companies and organizations create that software.</p>
+                <p class="note">The World Wide Web Consortium, or W3C is a group that makes recommendations about how the Internet works and how it should evolve.</p>
+            </section>
+            <section class="main-section" id="CSS_Versions">
+                <header>CSS Versions</header>
+                <p>Cascading Style Sheets level 1 (CSS1) came out of W3C as a recommendation in December 1996. This version describes the CSS language as well as a simple visual formatting model for all the HTML tags.</p>
+                <p>CSS2 became a W3C recommendation in May 1998 and builds on CSS1. This version adds support for media-specific style sheets e.g. printers and aural devices, downloadable fonts, element positioning and tables.</p>
+            </section>
+            <section class="main-section" id="The_Type_Selectors">
+                <header>The Type Selectors</header>
+                <p>This is the same selector we have seen above. Again, one more example to give a color to all level 1 headings</p>
+                <code>
+                    h1 {
+                        color: #36CFFF; 
+                     }
+                </code>
+            </section>
+            <section class="main-section" id="The_Universal_Selectors">
+                <header>The Universal Selectors</header>
+                <p>Rather than selecting elements of a specific type, the universal selector quite simply matches the name of any element type</p>
+                <code>
+                    * { 
+                        color: #000000; 
+                     }
+                </code>
+                <p>This rule renders the content of every element in our document in black.</p>
+            </section>
+            <section class="main-section" id="The_Descendant_Selectors">
+                <header>The Descendant Selectors</header>
+                <p>Suppose you want to apply a style rule to a particular element only when it lies inside a particular element. As given in the following example, style rule will apply to em element only when it lies inside ul tag.</p>
+                <code>
+                    ul em {
+                        color: #000000; 
+                     }
+                </code>
+            </section>
+            <section class="main-section" id="The_Class_Selectors">
+                <header>The Class Selectors</header>
+                <p>You can define style rules based on the class attribute of the elements. All the elements having that class will be formatted according to the defined rule.</p>
+                <code>
+                    .black {
+                        color: #000000; 
+                     }
+                </code>
+                <p>This rule renders the content in black for every element with class attribute set to black in our document. You can make it a bit more particular. For example</p>
+                <code>
+                    h1.black {
+                        color: #000000; 
+                     }
+                </code>
+                <p>This rule renders the content in black for only h1 elements with class attribute set to black. You can apply more than one class selectors to given element. Consider the following example</p>
+                <code>
+                    <p class = "center bold">
+                        This para will be styled by the classes center and bold.
+                     </p>
+                </code>
+            </section>
+            <section class="main-section" id="The_ID_Selectors">
+                <header>The ID Selectors</header>
+                <p>You can define style rules based on the id attribute of the elements. All the elements having that id will be formatted according to the defined rule.</p>
+                <code>
+                    #black {
+                        color: #000000; 
+                     }
+                </code>
+                <p>This rule renders the content in black for every element with id attribute set to black in our document. You can make it a bit more particular. For example</p>
+                <code>
+                    h1#black {
+                        color: #000000; 
+                     }
+                </code>
+                <p>This rule renders the content in black for only h1 elements with id attribute set to black.The true power of id selectors is when they are used as the foundation for descendant selectors, For example </p>
+                <code>
+                    #black h2 {
+                        color: #000000; 
+                     }
+                </code>
+                <p>In this example all level 2 headings will be displayed in black color when those headings will lie with in tags having id attribute set to black.</p>
+            </section>
+            <section class="main-section" id="The_border_style_Property">
+                <header>The border style Property</header>
+                <ul>
+                    <li>none − No border. (Equivalent of border-width:0;)</li>
+                    <li>solid − Border is a single solid line.</li>
+                    <li>dotted − Border is a series of dots.</li>
+                    <li>dashed − Border is a series of short lines.</li>
+                    <li>double − Border is two solid lines.</li>
+                    <li>groove − Border looks as though it is carved into the page.</li>
+                    <li>ridge − Border looks the opposite of groove.</li>
+                    <li>inset − Border makes the box look like it is embedded in the page.</li>
+                    <li>outset − Border makes the box look like it is coming out of the canvas.</li>
+                    <li>hidden − Same as none, except in terms of border-conflict resolution for table elements.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
